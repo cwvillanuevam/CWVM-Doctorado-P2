@@ -1,0 +1,46 @@
+
+--- Job SSS.gms Start 02/06/22 14:28:43 WEX-WEI 23.9.5 x86_64/MS Windows     
+GAMS Rev 239  Copyright (C) 1987-2012 GAMS Development. All rights reserved
+Licensee: Gary Goldstein                                 G010614:2121CA-WIN
+          Decision Ware, Inc.                                        DC2807
+--- Starting compilation
+--- SSS.gms(6) 2 Mb
+--- GDXin=C:\Archivos\Wyller\academico\Matlab\doctorado\paper 2\ev load mod wo chs\SSSin.gdx
+--- SSS.gms(24) 3 Mb
+--- GDXin=C:\Archivos\Wyller\academico\Matlab\doctorado\paper 2\ev load mod wo chs\SSSin.gdx
+--- SSS.gms(67) 3 Mb
+--- Starting execution: elapsed 0:00:00.415
+--- SSS.gms(56) 4 Mb
+--- Generating LP model SSS
+--- SSS.gms(61) 4 Mb
+---   4,047 rows  2,045 columns  8,751 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.604
+
+IBM ILOG CPLEX   Jul  4, 2012 23.9.5 WEX 36376.36401 WEI x86_64/MS Windows
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.4.0.1
+
+Reading data...
+Starting Cplex...
+Tried aggregator 1 time.
+LP Presolve eliminated 1989 rows and 1051 columns.
+Aggregator did 434 substitutions.
+Reduced LP has 1624 rows, 560 columns, and 4424 nonzeros.
+Presolve time =    0.02 sec.
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =             0.000000
+Iteration:   110   Dual objective     =        567529.188475
+LP status(1): optimal
+
+Optimal solution found.
+Objective :      567918.731297
+
+--- Restarting execution
+--- SSS.gms(61) 2 Mb
+--- Reading solution for model SSS
+--- Executing after solve: elapsed 0:00:05.429
+--- SSS.gms(63) 3 Mb
+*** Status: Normal completion
+--- Job SSS.gms Stop 02/06/22 14:28:48 elapsed 0:00:05.430

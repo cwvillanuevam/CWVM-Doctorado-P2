@@ -1,0 +1,1 @@
+Sch=xlsread('Solarcharacterization.xlsx','SCh','C1:C48','basic'); %Departure time

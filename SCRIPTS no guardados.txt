@@ -1,0 +1,50 @@
+IntMCSOPFSummary.m
+
+inttext=strcat(savefilename,'IntMCS_OPFsummary.txt');
+fint=fopen(inttext,'w');
+fprintf(fint,'Name of scenary: %s',SceType);
+fprintf(fint,'\n\t\t\tPS only load:\t\tMin MCS\t\tMax MCS');
+EnLoadOL=sum(Loadol)/4;
+MaxLoadOL=max(Loadol);
+LoadFacOL=EnLoadOL/24/MaxLoadOL;
+EnLoadmin=sum(Loadmin)/4;
+MaxLoadmin=max(Loadmin);
+LoadFacmin=EnLoadOL/24/MaxLoadmin;
+EnLoadmax=sum(Loadmax)/4;
+MaxLoadmax=max(Loadmax);
+LoadFacmax=EnLoadOL/24/MaxLoadmax;
+fprintf(fint,'\nEnergy Load:\t %7.2f\t\t%7.2f\t\t%7.2f',EnLoadOL,EnLoadmin,EnLoadmax);
+fprintf(fint,'\nPeak Load:  \t %7.2f\t\t%7.2f\t\t%7.2f',MaxLoadOL,MaxLoadmin,MaxLoadmax);
+fprintf(fint,'\nLoad factor:\t %7.2f\t\t%7.2f\t\t%7.2f',LoadFacOL,LoadFacmin,LoadFacmax);
+fclose all;
+
+OPFSummary
+
+opftext=strcat(savefilename,'OPFSummary.txt');
+fopf=fopen(opftext,'w');
+fprintf(fopf,'Name of scenary: %s',SceType);
+fprintf(fopf,'\n\t\t\t\t\tPS only load:\t\tMin MCS\t\tMax MCS');
+
+EnSupOL=sum(Genol)/4;
+NSEOL=sum(ENSol)/4;
+EnLoadOL=sum(Loadol)/4;
+EnLostOL=EnSupOL-EnLoadOL;
+maxNSPOL=max(ENSol);
+
+EnSupmin=sum(Genmin)/4;
+NSEmin=sum(ENSmin)/4;
+EnLoadmin=sum(Loadmin)/4;
+EnLostmin=EnSupmin-EnLoadmin;
+maxNSPmin=max(ENSmin);
+
+EnSupmax=sum(Genmax)/4;
+NSEmax=sum(ENSmax)/4;
+EnLoadmax=sum(Loadmax)/4;
+EnLostmax=EnSupmax-EnLoadmax;
+maxNSPmax=max(ENSmax);
+
+fprintf(fopf,'\nEnergy Supplied:    \t %7.2f\t\t%7.2f\t\t%7.2f',EnSupOL,EnSupmin,EnSupmax);
+fprintf(fopf,'\nEnergy Lost:        \t %7.2f\t\t%7.2f\t\t%7.2f',EnLostOL,EnLostmin,EnLostmax);
+fprintf(fopf,'\nNot Served Energy:  \t %7.2f\t\t%7.2f\t\t%7.2f',NSEOL,NSEmin,NSEmax);
+fprintf(fopf,'\nMaximum NSP:        \t %7.2f\t\t%7.2f\t\t%7.2f',maxNSPOL,maxNSPmin,maxNSPmax);
+fclose all;

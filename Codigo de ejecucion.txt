@@ -1,0 +1,1 @@
+[Genol,Genmin,Genmax,Loadol,Loadmin,Loadmax,ENSol,ENSmin,ENSmax,OverChargeol,OverChargemin,OverChargemax,savefilename,MCSmin,MCSq1,MCSmean,MCSq3,MCSmax,lf,Title,BUS,BRANCH,UCf,lmin,lmax,TScf,G1SD,G2SD,G3SD,G4SD,GVDfM,GVDtM,GVDfm,GVDtm]=ejecutableopf('ieee14cdf.txt','VAD',[80,3],48,[3750,200],'IEEE14BUSunifilar.PNG',["ScBYD13","Test"]);
